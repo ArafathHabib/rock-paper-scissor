@@ -1,0 +1,126 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    background-color: #333;
+    color: white;
+}
+
+.container{
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -20%);
+}
+
+.container .row h1{
+    text-align: center;
+}
+
+.head i{
+    font-size: 30px;
+}
+
+#pictures i{
+    font-size: 60px;
+    padding: 10px;
+    cursor: pointer;
+    border: 5px solid rgb(255, 255, 255);
+    border-radius: 50%;
+    color: rgb(255, 255, 255);
+    margin: 0px 5px;
+    visibility: visible;
+    opacity: 1;
+    transition: visibility 0s, opacity 0.5s linear;
+}
+
+#regular, #solid, #regular2, #solid2{
+    position: fixed;
+}
+.fa-solid{
+    visibility: hidden;
+}
+
+@media screen and (max-width: 770px){
+    .headH1{
+        margin-top: 120px;
+    }
+}
+
+#done{
+    width: 100px;
+}
+
+#userWin, #userLose, #gameDash{
+    display: none;
+}
+
+#login{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    width: 240px;
+}
+
+#loginInput{
+    height: 45px;
+}
+
+#loginBtn{
+    height: 45px;
+    width: 60px;
+    margin-left: 10px;
+}
+
+.body{
+    border: 1px solid gray;
+    border-radius: 10px;
+    padding-top: 0px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+#roundWinUser, #roundLoseUser, #roundDraw{
+    display: none;
+}
+
+#roundWinUser{
+    color: rgb(0, 209, 35);
+}
+
+#roundLoseUser{
+    color: red;
+}
+
+#roundDraw{
+    color: wheat;
+}
+
+.pics{
+    width: fit-content;
+}
+
+#rules-pic{
+    width: 220px;
+}
+
+#rules-pic{
+    background-color: wheat;
+    border-radius: 10px;
+    padding: 10px 0px;
+}
+
+footer{
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+    font-size: 18px;
+}
+
+footer a{
+    color: wheat;
+    text-decoration: none;
+}

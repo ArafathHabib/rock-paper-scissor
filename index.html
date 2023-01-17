@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/711ffcca01.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Rock Paper Scissors</title>
+</head>
+<body>
+    <div class="container">
+        <div id="login">
+            <h2>Enter your name</h2>
+            <div class="loginBody d-flex">
+                <div>
+                    <input id="loginInput" class="form-control" type="text" placeholder="type your name here">
+                </div>
+                <div>
+                    <button id="loginBtn" class="btn btn-primary">Play</button>
+                </div>
+            </div>
+            <div id="picDiv">
+                <img id="rules-pic" class="mt-5" src="images/1200px-Rock-paper-scissors.svg.png" alt="">
+            </div>
+        </div>
+        <div id="gameDash" class="row">
+            <div class="row">
+                <h1 class="headH1">Round <span id="round">1</span></h1>
+                <h1 id="roundWinUser">You win this round</h1>
+                <h1 id="roundLoseUser">You Lose this round</h1>
+                <h1 id="roundDraw">Draw</h1>
+                <div class="mb-3 col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 d-flex justify-content-center">
+                    <div class="body text-center">
+                        <div class="head my-3">
+                            <h2 id="name"></h2>
+                            <div class="stars d-flex justify-content-center py-3">
+                                <div id="solid">
+                                    <i class="fa-solid fa-star" id="starSolid1"></i>
+                                    <i class="fa-solid fa-star" id="starSolid2"></i>
+                                    <i class="fa-solid fa-star" id="starSolid3"></i>
+                                </div>
+                                <div id="regular">
+                                    <i class="fa-regular fa-star" id="starRegular1"></i>
+                                    <i class="fa-regular fa-star" id="starRegular2"></i>
+                                    <i class="fa-regular fa-star" id="starRegular3"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="pictures" class="mt-5 mb-3 d-flex">
+                            <div class="row justify-content-center">
+                                <div class="col-6 col-sm-4 col-md-4 col-xl-4 pics">
+                                    <i id="pic1" class="fa-regular fa-hand-back-fist"></i>
+                                    <p id="userRock">rock</p>
+                                </div>
+                                <div class="col-6 col-sm-4 col-md-4 col-xl-4 pics">
+                                    <i id="pic2" class="fa-regular fa-hand"></i>
+                                    <p id="userPaper">paper</p>
+                                </div>
+                                <div class="col-6 col-sm-4 col-md-4 col-xl-4 pics">
+                                    <i id="pic3" class="fa-regular fa-hand-scissors"></i>
+                                    <p id="userScissor">scissor</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-center w-100">
+                            <button id="done" class="btn btn-primary">Done</button>
+                        </div>
+                        <h4 class="mt-4">Take your pick and click done</h4>
+                    </div>
+                </div>
+                <div class="mb-2 col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 d-flex justify-content-center">
+                    <div class="body text-center">
+                    <div class="head my-3">
+                        <h2>Computer</h2>
+                        <div class="stars d-flex justify-content-center py-3">
+                            <div id="solid2">
+                                <i class="fa-solid fa-star" id="starSolid4"></i>
+                                <i class="fa-solid fa-star" id="starSolid5"></i>
+                                <i class="fa-solid fa-star" id="starSolid6"></i>
+                            </div>
+                            <div id="regular2">
+                                <i class="fa-regular fa-star" id="starRegular4"></i>
+                                <i class="fa-regular fa-star" id="starRegular5"></i>
+                                <i class="fa-regular fa-star" id="starRegular6"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="pictures" class="mt-5 mb-3">
+                        <div class="row justify-content-center">
+                            <div class="col-6 col-sm-4 col-md-4 col-xl-4 pics">
+                                <i id="pcPic1" class="fa-regular fa-hand-back-fist"></i>
+                                <p id="pcRock">rock</p>
+                            </div>
+                            <div class="col-6 col-sm-4 col-md-4 col-xl-4 pics">
+                                <i id="pcPic2" class="fa-regular fa-hand"></i>
+                                <p id="pcPaper">paper</p>
+                            </div>
+                            <div class="col-6 col-sm-4 col-md-4 col-xl-4 pics">
+                                <i id="pcPic3" class="fa-regular fa-hand-scissors"></i>
+                                <p id="pcScissor">scissor</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+        <div id="userWin" class="text-center">
+            <h2>Congratulations! You Won the game</h2>
+            <button id="reload" class="btn btn-secondary">Play Again</button>
+        </div>
+        <div id="userLose" class="text-center">
+            <h2>Oh! You Lose the game</h2>
+            <button id="reload2" class="btn btn-secondary">Play Again</button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+</body>
+<footer id="footer">Created by <a href="https://www.facebook.com/arafath.habib.90" target="_blank">Arafath Habib</a></footer>
+</html>
